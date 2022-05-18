@@ -2,16 +2,17 @@
 var mosca = require("mosca");
 
 var pubsubsettings = {
-	type: "mqtt",
-	json: false,
-	mqtt: require("mqtt"),
-	host: "my-mqttbroker.herokuapp.com" || "127.0.0.1",
-	port: process.env.PORT || 1883,
+	//using ascoltatore
+	type: "mongo",
+	url: "mongodb://localhost:27017/mqtt",
+	pubsubCollection: "ascoltatori",
+	mongo: {},
 };
 
 var settings = {
-	port: 1883,
-	backend: pubsubsettings,
+	port: process.env.PORT || 1883, //mosca (mqtt) port
+	host: "my-mqttbroker.herokuapp.com" || "127.0.0.1",
+	backend: pubsubsettings, //pubsubsettings is the object we created above
 };
 
 var server = new mosca.Server(settings);
