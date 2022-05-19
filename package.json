@@ -12,7 +12,6 @@
 	"dependencies": {
 		"aedes": "^0.45.0",
 		"dotenv": "^16.0.1",
-		"mosca": "^2.8.3",
 		"mqtt": "^4.3.7",
 		"websocket-stream": "^5.5.2"
 	}
