@@ -29,5 +29,3 @@ aedes.on("publish", (packet, client) => {
 		);
 	}
 });
-
-app.listen(port);
