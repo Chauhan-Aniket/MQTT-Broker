@@ -5,3 +5,7 @@ const port = process.env.PORT || 80;
 server.listen(port, function () {
 	console.log("server started and listening on port ", port);
 });
+
+aedes.on("publish", (packet) => {
+	console.log(packet.payload.toString());
+});
