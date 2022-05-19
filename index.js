@@ -1,3 +1,4 @@
+const connect = require("connect");
 const favicon = require("serve-favicon");
 const path = require("path");
 
@@ -6,8 +7,10 @@ const httpServer = require("http").createServer();
 const ws = require("websocket-stream");
 const port = process.env.PORT || 1234;
 
+const app = connect();
+
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 ws.createServer({ server: httpServer }, aedes.handle);
-httpServer.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 httpServer.listen(port, function () {
 	console.log("websocket server listening on port ", port);
 });
