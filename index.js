@@ -2,8 +2,8 @@ const aedes = require("aedes")();
 const server = require("net").createServer(aedes.handle);
 const httpServer = require("http").createServer();
 const ws = require("websocket-stream");
-const port = process.env.PORT || 80;
-const wsPort = process.env.WSPORT || 8884;
+const port = process.env.PORT || 1234;
+const wsPort = process.env.WSPORT || 80;
 
 server.listen(port, function () {
 	console.log("server started and listening on port ", port);
