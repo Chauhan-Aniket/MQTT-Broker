@@ -6,6 +6,10 @@ server.listen(port, function () {
 	console.log("server started and listening on port ", port);
 });
 
-aedes.on("publish", (packet) => {
-	console.log(packet.payload.toString());
+aedes.on("publish", (packet, client) => {
+	if (client) {
+		console.log(
+			`MQTT Client: ${client.id} has published message "${packet.payload}" on ${packet.topic}`
+		);
+	}
 });
