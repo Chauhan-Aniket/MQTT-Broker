@@ -1,3 +1,10 @@
+const express = require("express");
+const favicon = require("serve-favicon");
+const path = require("path");
+
+var app = express();
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+
 const aedes = require("aedes")();
 const server = require("net").createServer(aedes.handle);
 const httpServer = require("http").createServer();
