@@ -1,0 +1,7 @@
+{
+	"name": "MQTT Broker using Aedes",
+	"description": "MQTT broker over websockets",
+	"repository": "https://github.com/Chauhan-Aniket/mqtt-broker",
+	"logo": "https://firebasestorage.googleapis.com/v0/b/codester-7802d.appspot.com/o/Thu%20Jun%2002%202022%2010%3A35%3A58%20GMT%2B0530%20(India%20Standard%20Time)-mqtt.png?alt=media&token=fae929d5-6d20-4b31-94ba-3e98a6f9cd4a",
+	"keywords": ["node", "mqtt", "aedes"]
+}
